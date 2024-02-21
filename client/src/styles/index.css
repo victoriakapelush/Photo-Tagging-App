@@ -46,4 +46,5 @@ p {
     justify-content: space-between;
     gap: 1rem;
     padding-right: 4rem;
+    align-items: center;
 }

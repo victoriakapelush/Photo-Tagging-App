@@ -49,18 +49,18 @@ async function createCharacter() {
   await Promise.all([
     characterCreate({
       name: "Waldo",
-      image: `${imagePathPrefix}waldo-icon.jpg`,
-      coordinates: [[1605, 6986], [1664, 7067]]
+      image: `${imagePathPrefix}waldo-icon.png`,
+      coordinates: [[1167, 294], [1192, 378]]
   }),
     characterCreate({
       name: "Wilson",
       image: `${imagePathPrefix}wilson.png`,
-      coordinates: [[1656, 8294], [1708, 8368]]
+      coordinates: [[1194, 700], [1220, 755]]
   }),
   characterCreate({
       name: "Brian",
       image: `${imagePathPrefix}brian.png`,
-      coordinates: [[1194, 2881], [1244, 2983]]
+      coordinates: [[199, 256], [216, 491]]
   })
   ])
 }
