@@ -7,9 +7,8 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 
-var app = express();
+const app = express();
 
 require('dotenv').config();
 
@@ -19,9 +18,9 @@ app.use(cors({
 }));
 
 // setup mongoose
-//const mongoDB = process.env.mongoDB;
+const mongoDB = process.env.mongoDB;
 mongoose.set('strictQuery', false);
-const mongoDBase = "mongodb+srv://victoriakapelush:sakuraSun123@cluster0.qpt6ako.mongodb.net/Waldo?retryWrites=true&w=majority";
+const mongoDBase = mongoDB;
 main().catch(err => console.log(err));
 async function main() {
   await mongoose.connect(mongoDBase);
