@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const mongoose = require("mongoose");
+require('dotenv').config({ path: './config.env' });
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
@@ -9,8 +10,6 @@ const cors = require('cors');
 const indexRouter = require('./routes/index');
 
 const app = express();
-
-require('dotenv').config();
 
 app.use(cors({
   origin: 'https://photo-tagging-app-1.onrender.com', 
