@@ -7,11 +7,12 @@ body {
 .image-container {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    background-color:rgb(88, 85, 85);
 }
 
 .background-image {
     width: 100%;
+    height: auto;
 }
 
 /* HEADER */
@@ -47,4 +48,23 @@ p {
     gap: 1rem;
     padding-right: 4rem;
     align-items: center;
+}
+
+footer {
+    background-color: rgb(88, 85, 85);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 3rem;
+    width: 100%;
+    align-items: center;
+}
+
+a, a:visited {
+    text-decoration: underline;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
 }
