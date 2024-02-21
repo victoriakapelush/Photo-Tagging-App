@@ -1,4 +1,8 @@
 node_modules/
 .DS_Store
 config.js
+<<<<<<< HEAD
 config.env
+=======
+config.env
+>>>>>>> 03012333f108bd007bc30deb207e41e05be0d5f4
