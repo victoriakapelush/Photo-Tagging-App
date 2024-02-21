@@ -17,7 +17,7 @@ const App = () => {
     const clickY = event.clientY;
   
     try {
-      const rangeResponse = await fetch('http://localhost:3000');
+      const rangeResponse = await fetch('https://photo-tagging-app-u7si.onrender.com');
       if (!rangeResponse.ok) {
         throw new Error('Failed to fetch range coordinates');
       }
@@ -64,7 +64,7 @@ const App = () => {
 // Fetch background image and characters icons from server
   const fetchImagesAndCharacters = async () => {
     try {
-      const response = await fetch('http://localhost:3000');
+      const response = await fetch('https://photo-tagging-app-u7si.onrender.com');
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
@@ -126,14 +126,14 @@ const App = () => {
         <div className='single-icons'>
           {characters.map((character) => (
             <div key={character._id}>
-              <img className='character-icon' src={`http://localhost:3000/${character.image}`} alt={`Character ${character.name}`} />
+              <img className='character-icon' src={`https://photo-tagging-app-u7si.onrender.com/${character.image}`} alt={`Character ${character.name}`} />
             </div>
           ))}
         </div>
       </header>
       <div className="image-container">
         {images.map((image) => (
-          <img onClick={handleClick} className='background-image' key={image._id} src={`http://localhost:3000/${image.image}`} alt="background image with all the characters" />
+          <img onClick={handleClick} className='background-image' key={image._id} src={`https://photo-tagging-app-u7si.onrender.com/${image.image}`} alt="background image with all the characters" />
         ))}
       </div>
       <footer>Designed and developed by <a href="https://victoriakapelush.com" target='blank'>Victoria Kapelush</a></footer>

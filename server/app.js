@@ -13,7 +13,7 @@ const app = express();
 require('dotenv').config();
 
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: 'https://photo-tagging-app-1.onrender.com', 
   credentials: true
 }));
 
