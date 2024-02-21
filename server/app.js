@@ -18,7 +18,7 @@ app.use(cors({
 }));
 
 // setup mongoose
-const mongoDB = config.env.mongoDB;
+const mongoDB = process.env.mongoDB;
 mongoose.set('strictQuery', false);
 const mongoDBase = mongoDB;
 main().catch(err => console.log(err));
