@@ -11,7 +11,7 @@ function GameOverPopup({ gameOverMessage, game }) {
   return (
     <div className="popup-container" style={{ top: topPercentage }}>
       <div className="game-over-div">{gameOverMessage}</div>
-      <Link to="/home" className="go-home-btn">
+      <Link to="/" className="go-home-btn">
         Go to Main Page
       </Link>
     </div>

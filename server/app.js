@@ -15,10 +15,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "https://photo-tagging-app-1.onrender.com",
-      "http://localhost:5173",
-    ],
+    origin: "https://photo-tagging-app-1.onrender.com",
     credentials: true,
   }),
 );
