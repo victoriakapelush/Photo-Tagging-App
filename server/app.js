@@ -24,9 +24,7 @@ app.use(
 );
 
 // setup mongoose
-// const mongoDB = process.env.mongoDB;
-const mongoDB =
-  "mongodb+srv://victoriakapelush:sakuraSun123@cluster0.qpt6ako.mongodb.net/Waldo?retryWrites=true&w=majority";
+const mongoDB = process.env.mongoDB;
 mongoose.set("strictQuery", false);
 const mongoDBase = mongoDB;
 main().catch((err) => console.log(err));

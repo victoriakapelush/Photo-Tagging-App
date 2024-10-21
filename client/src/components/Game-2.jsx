@@ -37,7 +37,7 @@ const Game2 = ({ game }) => {
   // Fetch background image and character icons for game two from the server
   const fetchImagesAndCharacters = async () => {
     try {
-      const response = await fetch("http://localhost:8000/game-two");
+      const response = await fetch("https://photo-tagging-app-u7si.onrender.com/game-two");
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
@@ -237,7 +237,7 @@ const Game2 = ({ game }) => {
               <div key={character._id}>
                 <img
                   className="character-icon"
-                  src={`http://localhost:8000/${character.image}`}
+                  src={`https://photo-tagging-app-u7si.onrender.com/${character.image}`}
                   alt={`Character ${character.name}`}
                   style={{
                     display: foundCharacters.includes(character.name)
@@ -256,7 +256,7 @@ const Game2 = ({ game }) => {
           <img
             className="background-image"
             key={images._id}
-            src={`http://localhost:8000/${images.image}`}
+            src={`https://photo-tagging-app-u7si.onrender.com/${images.image}`}
             alt="background image with all the characters"
             onClick={handleClick}
             onLoad={updateImageDimensions}

@@ -3,9 +3,10 @@ const Image = require("./models/Image");
 const Character = require("./models/Character");
 const mongoose = require("mongoose");
 
+require("dotenv").config({ path: "./config.env" });
+
 mongoose.set("strictQuery", false);
-const mongoDB =
-  "mongodb+srv://victoriakapelush:sakuraSun123@cluster0.qpt6ako.mongodb.net/Waldo?retryWrites=true&w=majority";
+const mongoDB = process.env.mongoDB;
 main().catch((err) => console.log(err));
 
 // Connect to MongoDB

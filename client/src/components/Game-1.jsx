@@ -35,14 +35,13 @@ const Game1 = ({ game }) => {
   // Fetch background image and character icons for game one from the server
   const fetchImagesAndCharacters = async () => {
     try {
-      const response = await fetch("http://localhost:8000/game-one");
+      const response = await fetch("https://photo-tagging-app-u7si.onrender.com/game-one");
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
       const data = await response.json();
 
       if (data && data.image && data.characters) {
-        // For game two, we set the background image and the last three character icons
         setImages(data.image); // Set the background image for game two
         setAllCharacters(data.characters); // Set the last three characters
       } else {
@@ -123,7 +122,7 @@ const Game1 = ({ game }) => {
     const clickY = ((event.clientY - rect.top) / imageHeight) * originalHeight;
 
     try {
-      const rangeResponse = await fetch("http://localhost:8000");
+      const rangeResponse = await fetch("https://photo-tagging-app-u7si.onrender.com");
       if (!rangeResponse.ok) {
         throw new Error("Failed to fetch range coordinates");
       }
@@ -249,7 +248,7 @@ const Game1 = ({ game }) => {
               <div key={character._id}>
                 <img
                   className="character-icon"
-                  src={`http://localhost:8000/${character.image}`}
+                  src={`https://photo-tagging-app-u7si.onrender.com/${character.image}`}
                   alt={`Character ${character.name}`}
                   style={{
                     display: foundCharacters.includes(character.name)
@@ -267,7 +266,7 @@ const Game1 = ({ game }) => {
         <img
           className="background-image"
           key={images._id}
-          src={`http://localhost:8000/${images.image}`}
+          src={`https://photo-tagging-app-u7si.onrender.com/${images.image}`}
           alt="background image with all the characters"
           onClick={handleClick}
           onLoad={updateImageDimensions}
