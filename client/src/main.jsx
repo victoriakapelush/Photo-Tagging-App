@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/game-one" element={<GameContainer game="game-one" />} />
         <Route path="/game-two" element={<GameContainer game="game-two" />} />
-        <Route path="/home" element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
       </Routes>
     </Router>
   </React.StrictMode>,
