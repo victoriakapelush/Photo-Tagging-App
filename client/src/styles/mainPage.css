@@ -1,0 +1,67 @@
+html {
+  background-color: black;
+  color: #edeade;
+  font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual,
+    cursive;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100%;
+}
+
+.main-header {
+  width: 100%;
+  height: 3rem;
+  background-color: aqua;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.padding {
+  padding: 1rem 1rem;
+}
+
+.font-large {
+  font-size: 3rem;
+}
+
+.red-font {
+  color: red;
+}
+
+.image-size {
+  width: 15rem;
+  height: auto;
+}
+
+.game-container {
+  border: 1px solid black;
+  width: clamp(10rem, 50%, 40rem);
+  height: clamp(10rem, 50vh, 40rem);
+  position: relative;
+  overflow: hidden;
+}
+.game-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gap {
+  gap: 3rem;
+}
+
+.margin {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.game-container:hover img {
+  transform: scale(1.1);
+}
