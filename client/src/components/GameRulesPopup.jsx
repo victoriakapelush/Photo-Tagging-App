@@ -4,7 +4,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../styles/GameRulesPopup.css";
+import "../styles/gameRulesPopup.css";
 
 function GameRulesPopup({ showGameRulesPopup, game }) {
   const topPercentage = game === "game-one" ? "5%" : "10%";
